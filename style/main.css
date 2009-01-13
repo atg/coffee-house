@@ -1,0 +1,363 @@
+/* @override http://www.davidczihak.at/sugarstore/style/main.css */
+
+/*
+
+	dark brown		#7f410b
+
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, input, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, textarea, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	background: url(images/background.png);
+	/*font-family: "Lucida Grande", Arial, sans-serif;*/
+	font-family: Georgia, Times, serif;
+	font-size: 12px;
+	color: #333;
+}
+
+#main {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#sugarstore {
+	width: 500px;
+	height: 200px;
+	background: url(images/sugarstore.png);
+	margin-bottom: 10px;
+}
+
+#navigation {
+	margin-bottom: 30px;
+}
+
+/* @group Menu */
+
+#navigation {
+	margin-bottom: 80px;
+}
+
+#navigation span {
+	display: block;
+	width: 125px;
+	float: left;
+	height: 30px;
+}
+
+#navigation span a {
+	display: block;
+	width: 125px;
+	height: 0;
+	overflow: hidden;
+	padding-top: 30px;
+	background: url(images/menu.png);
+}
+
+#navigation span a#t1 {background-position: 0 0;}
+#navigation span a#t1:hover {background-position: 0 -30px;}
+#navigation span a#t1.active {background-position: 0 -60px;}
+
+#navigation span a#t2 {background-position: -125px 0;}
+#navigation span a#t2:hover {background-position: -125px -30px;}
+#navigation span a#t2.active {background-position: -125px -60px;}
+
+#navigation span a#t3 {background-position: -250px 0;}
+#navigation span a#t3:hover {background-position: -250px -30px;}
+#navigation span a#t3.active {background-position: -250px -60px;}
+
+#navigation span a#t4 {background-position: -375px 0;}
+#navigation span a#t4:hover {background-position: -375px -30px;}
+#navigation span a#t4.active {background-position: -375px -60px;}
+
+/* @end */
+
+hr {
+	border: none;
+	background: url(images/cut.png) no-repeat top;
+	height: 1px;
+}
+
+hr.space {
+	margin-top: 20px;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+.alt {
+	font-family: Georgia, Times, serif;
+}
+
+/* @group List */
+
+.list {
+	margin: 10px 0;
+}
+
+.list span {
+	display: block;
+}
+
+.list span a {
+	display: block;
+	color: #333;
+	padding: 8px;
+	height: 14px;
+	background: url(images/link.png);
+	padding-left: 34px;
+	font-size: 12px;
+	font-weight: normal;
+	float: left;
+	width: 428px;
+}
+
+.list span a:hover {
+	background-position: 0 -30px;
+}
+
+.list span a.quickload {
+	width: 30px;
+	height: 0;
+	padding: 0;
+	padding-top: 30px;
+	float: right;
+	overflow: hidden;
+	background: url(images/quickload.png);
+}
+
+.list span:hover a.quickload {
+	background-position: 0 -30px;
+}
+
+.list span:hover a.quickload:hover {
+	background-position: 0 -60px;
+}
+
+/* @end */
+
+.sugar {
+	background: url(images/sugar.png) no-repeat left center;
+}
+
+.theme {
+	background: url(images/theme.png) no-repeat left center;
+}
+
+h2.sugar,
+h2.theme {
+	width: 500px;
+	height: 30px;
+}
+
+h2.sugar span.first,
+h2.theme span.first {
+	display: block;
+	width: 377px;
+	padding: 7px;
+	float: left;
+	height: 16px;
+	padding-left: 25px;
+}
+
+h2 span a.download {
+	width: 90px;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+	padding-top: 30px;
+	background: url(images/download.png);
+	float: right;
+}
+
+h2 span a.download:hover {
+	background-position: 0 -30px;
+}
+
+a {
+	text-decoration: none;
+	color: #3c68a2;
+}
+
+a:hover {
+	color: #a242ac;
+}
+
+p#footer {
+	margin-top: 20px;
+	font-size: 10px;
+	text-align: center;
+	color: #999;
+	font-style: italic;
+}
+
+h2 {
+	margin: 20px 0 5px 0;
+	font-size: 15px;
+	font-family: Georgia, Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	color: #7f410b;
+}
+
+h2.half {width: 245px;}
+
+p {
+	margin: 8px 0;
+	line-height: 1.5;
+}
+
+p.description {
+	margin-top: 20px;
+}
+
+/* @group Inputs */
+
+input, textarea {
+	color: #333;
+}
+
+input[type=text],
+textarea {
+	background: rgba(169,162,156,0.2);
+	-webkit-border-radius: 2px;
+	padding: 8px;
+	border: 1px solid rgba(169,162,156,0.5);
+}
+
+input[type=text].half {width: 227px;}
+input[type=text].full {width: 482px;}
+
+textarea.half {width: 227px; max-width: 227px;}
+textarea.full {width: 482px; max-width: 482px;}
+
+input[type=submit] {
+	background: rgba(169,162,156,0.63);
+	border-top: 1px solid rgba(255,255,255,0.6);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	-webkit-border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 0px 1px 0px #888;
+	font-weight: bold;
+}
+
+input[type=submit]:hover {
+	background: rgba(169,162,156,0.8);
+}
+
+input[type=text].search {width: 390px; padding: 5px 8px;}
+input[type=submit].search {width: 80px;}
+
+form {
+	margin-bottom: 20px;
+}
+
+select {
+	background: #f8f2ea;
+	border: 1px solid #b0a8a1;
+	color: #444;
+	height: 20px;
+	width: 100px;
+	padding: 0;
+	margin: 0;
+}
+
+h2 select {
+	font-family: Georgia, Times, serif;
+	font-style: italic;
+	font-size: 14px;
+	color: #7f410b;
+}
+
+:focus,
+textarea:focus {
+	outline: 1px solid #888;
+	outline: auto 5px -webkit-focus-ring-color;
+}
+
+p.error {
+	padding: 5px;
+	background: rgba(216,0,16,0.06);
+	border: 1px solid rgba(216,0,16,0.06);
+	margin: 5px 0;
+	-webkit-border-radius: 2px;
+	font-family: Georgia, Times, serif;
+	color: #242424;
+}
+
+/* @end */
+
+.vote a {
+	display: block;
+	width: 11px;
+	height: 11px;
+	background: url(images/star.png);
+	float: left;
+}
+
+.vote a:hover {
+	background-position: 0 -11px;
+}
+
+/* @group Theme Preview */
+
+.preview_header {
+	width: 500px;
+	height: 75px;
+	background: url(images/preview_header.png);
+}
+
+.preview {
+	background: url(images/preview_middle.png);
+	padding: 0 48px;
+}
+
+.preview_footer {
+	width: 500px;
+	height: 51px;
+	background: url(images/preview_footer.png);
+}
+
+div.pre {
+	white-space: pre-wrap;
+	font-family: Espresso Mono, monospace;
+	font-size: 11px;
+	background: #fff;
+	padding: 10px;
+	color: #333;
+	margin-left: 1px;
+}
+
+div.pre span {
+	display: inline;
+}
+
+.comment {
+	color: #888;
+}
+
+.php {}
+.php.variable_php {color: #3d96fc; background-color: #f2fbfe;}
+
+.css.selector_css {color: #3a77bf;}
+.css.property-name {color: #d4430d;}
+.css.property-value {color: #43a202;}
+
+.php.keyword {color: #6700b9;}
+.php.function {color: #6700b9;}
+.string_single,
+.string_double {color: #73b00a;}
+.php.include {color: #555; background-color: #f8f8f8;}
+
+/* @end */

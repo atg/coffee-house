@@ -1,0 +1,1 @@
+<h2>Your <?=$this->input->post('type')?> is submitted!</h2>
