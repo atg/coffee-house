@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://www.davidczihak.at/sugarstore/";
+$config['base_url']	= "http://www.fileability.net/coffeehouse/";
 
 /*
 |--------------------------------------------------------------------------
