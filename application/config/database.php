@@ -37,7 +37,8 @@
 $active_group = "default";
 $active_record = TRUE;
 
-require('/home/fileabil/public_html/coffeehousedb.php');
+//require('/home/fileabil/public_html/coffeehousedb.php');
+require(dirname(__FILE__) . '/../../../coffeehousedb.php');
 
 /* End of file database.php */
 /* Location: ./system/application/config/database.php */
