@@ -10,7 +10,7 @@
 
 <div id="main">
 
-	<div id="sugarstore"></div>
+	<div id="coffeehouse"></div>
 	
 	<div id="navigation">
 		<?php
