@@ -1,6 +1,7 @@
 
 <!-- <p>Filter: <?=anchor('view/sugars','Sugars')?> <?=anchor('view/themes','Themes')?> <?=anchor('view/both','Both')?></p> -->
 
+<?=$this->load->view('search_form')?>
 <hr/>
 <div class="list">
 	<div id="list_content">

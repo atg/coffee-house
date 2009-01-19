@@ -256,9 +256,6 @@ input[type=submit]:hover {
 	background: rgba(169,162,156,0.8);
 }
 
-input[type=text].search {width: 390px; padding: 5px 8px;}
-input[type=submit].search {width: 80px;}
-
 form {
 	margin-bottom: 20px;
 }
