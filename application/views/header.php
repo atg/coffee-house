@@ -5,12 +5,14 @@
 	<title>SugarStore</title>
 	<link rel="stylesheet" href="<?=base_url()?>style/main.css" type="text/css" media="screen" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="js/mootools-1.2.1-core.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
 </head>
 <body>
 
 <div id="main">
 
-	<div id="sugarstore"></div>
+	<div id="coffeehouse"></div>
 	
 	<div id="navigation">
 		<?php
