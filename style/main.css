@@ -1,4 +1,4 @@
-/* @override http://www.davidczihak.at/sugarstore/style/main.css */
+/* @override http://www.fileability.net/coffeehouse/style/main.css */
 
 /*
 
@@ -29,10 +29,10 @@ body {
 	margin: 0 auto;
 }
 
-#sugarstore {
+#coffeehouse {
 	width: 500px;
 	height: 200px;
-	background: url(images/sugarstore.png);
+	background: url(images/coffeehouse.png);
 	margin-bottom: 10px;
 }
 
