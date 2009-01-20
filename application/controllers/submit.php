@@ -102,7 +102,8 @@ class Submit extends Controller {
 					return;
 				}
 			
-				$langXML = $this->getLanguageXML($this->upload->data()["full_path"], $err);
+				$fileData = $this->upload->data();
+				$langXML = $this->getLanguageXML($fileData["full_path"], $err);
 				if ($langXML == "" || $err != "")
 				{
 					//Error
