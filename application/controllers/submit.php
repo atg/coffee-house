@@ -2,15 +2,18 @@
 
 class Submit extends Controller {
 	
-	function getLanguageXML(&$err)
+	function getLanguageXML($path, &$err)
 	{
-		if (!isset($_FILES['languagexml']))
+		$err = "";
+		
+		//Check that $path is valid
+		if (!isset($path) || file_exists($path))
 		{
 			$err = "Please upload a langauge.xml file..";
 			return "";
 		}
 
-		$file = $_FILES['languagexml'];
+	/*	$file = $_FILES['languagexml'];
 		if (!$file)
 		{
 			$err = "Please upload a valid langauge.xml file..";
@@ -22,12 +25,21 @@ class Submit extends Controller {
 			$err = "Language.xml must be under 1MB.";
 			return "";
 		}
+		*/
 
-
-		$h = fopen($file['tmp_name'], 'r');
+		//Open the file
+		$h = fopen($path, 'r');
+		
+		//Extract the string rep
 		$lang = fgets($h);
+		
+		//Close the file
 		fclose($h);
-
+		
+		//Delete the temp file
+		unlink($path);
+		
+		//Check that the file wasn't empty
 		if (!strlen($lang))
 		{
 			$err = "Please upload a non-empty langauge.xml file.";
@@ -70,15 +82,35 @@ class Submit extends Controller {
 				$download_url = '';
 			}
 			
+			//Upload the language.xml file
 			$err = "";
-			$langXML = $this->getLanguageXML($err);
-			if ($use_github == 0 && ($langXML == "" || $err != ""))
+			$langXML = "";
+			if ($use_github == 0)
 			{
-				//Error
-				$this->load->view('submit_form', array('error_text' => $err));
-				$this->load->view('footer');
-				return;
-			}
+				$opts = array();
+				$opts['upload_path'] = './tmp_uploads/';
+				$opts['allowed_types'] = 'xml';
+				$opts['max_size']	= '1024';
+
+				$this->load->library('upload', $opts);
+
+				if (!$this->upload->do_upload())
+				{
+					//Error
+					$this->load->view('submit_form', array('error_text' => $this->upload->display_errors()));
+					$this->load->view('footer');
+					return;
+				}
+			
+				$langXML = $this->getLanguageXML($this->upload->data()["full_path"], $err);
+				if ($langXML == "" || $err != "")
+				{
+					//Error
+					$this->load->view('submit_form', array('error_text' => $this->upload->display_errors()));
+					$this->load->view('footer');
+					return;
+				}
+			}	
 			
 			$data = array(
 				'id'			=> '',
