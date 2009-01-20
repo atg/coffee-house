@@ -74,7 +74,8 @@ class Submit extends Controller {
 			$langXML = $this->getLanguageXML($err);
 			if ($use_github == 0 && ($langXML == "" || $err != ""))
 			{
-				$this->load->view('submit_form');
+				//Error
+				$this->load->view('submit_form', array('error_text' => $err));
 				$this->load->view('footer');
 				return;
 			}

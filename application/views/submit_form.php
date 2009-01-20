@@ -1,5 +1,9 @@
 	
 	<?=validation_errors("<p class='error'>", "</p>")?>
+	<?php
+	if (isset($error_text))
+		echo "<p class='error'>$error_text</p>";
+	?>
 	
 	<?=form_open('submit')?>
 		
@@ -37,7 +41,7 @@
 		<h2 class="half right">Password</h2>
 			<div class="clear"></div>
 		<input type="text" class="half left" name="mail" value="<?=set_value('mail')?>" />
-		<input type="text" class="half right" name="password" value="<?=set_value('password')?>" />
+		<input type="password" class="half right" name="password" value="<?=set_value('password')?>" />
 			<div class="clear"></div>
 		
 		<hr class="space"/>
