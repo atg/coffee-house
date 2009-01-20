@@ -19,12 +19,11 @@
 		<input type="text" class="half right" name="github_project" value="<?=set_value('github_project')?>" />
 			<div class="clear"></div>
 		
-		<h2>OR direct download url</h2>
 		<h2 class="half left"><em>OR</em> Direct Download URL</h2>
 		<h2 class="half right">Language XML file</h2>
 			<div class="clear"></div>
 		<input type="text" class="half left" name="download_url" value="<?=set_value('download_url')?>" />
-		<input type="file" class="half right" name="languagexml" />
+		<div class="half right"><input type="file" name="languagexml" /></div>
 		<hr class="space"/>
 		
 		<h2>Description*</h2>
