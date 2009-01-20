@@ -1,5 +1,9 @@
 <?php
 
+# File: ajax.php
+# Controller
+# Ajax support
+
 class Ajax extends Controller {
 	
 	function index()
@@ -28,6 +32,7 @@ class Ajax extends Controller {
 				<span class="<?=$row->type?>">
 					<?=anchor('sugar/'.$row->id, $row->name)?>
 					<?=anchor('quickload/'.$row->id, 'Download', array('class'=>'quickload'))?>
+					<div class="clear"></div>
 				</span>
 				<?
 			}
