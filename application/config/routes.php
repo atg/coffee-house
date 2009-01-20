@@ -43,13 +43,10 @@
 $route['default_controller'] = "sugarstore";
 $route['scaffolding_trigger'] = "";
 
-$route['sugar/:num'] = "sugarstore/sugar/product_lookup";
+$route['sugar/:any'] = "sugarstore/sugar/product_lookup";
 $route['download/:num'] = "sugarstore/download/product_lookup";
 $route['quickload/:num'] = "sugarstore/quickload/product_lookup";
 $route['about'] = "sugarstore/about";
-$route['search'] = "sugarstore/search";
-$route['search/:any'] = "sugarstore/search/product_lookup";
-/* $route['submit'] = "sugarstore/submit"; */
 $route['dev/:any'] = "sugarstore/dev/product_lookup";
 
 $route['theme/:num'] = "theme/live/product_lookup";

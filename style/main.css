@@ -1,4 +1,7 @@
-/* @override http://www.fileability.net/coffeehouse/style/main.css */
+/* @override 
+	http://www.fileability.net/coffeehouse/style/main.css
+	http://localhost/~david/coffee-house/style/main.css
+*/
 
 /*
 
@@ -227,6 +230,7 @@ input, textarea {
 }
 
 input[type=text],
+input[type=password],
 textarea {
 	background: rgba(169,162,156,0.2);
 	-webkit-border-radius: 2px;
@@ -234,8 +238,19 @@ textarea {
 	border: 1px solid rgba(169,162,156,0.5);
 }
 
+input[type=file] {
+	width: 245px;
+	height: 32px;
+	background: #fff;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
 input[type=text].half {width: 227px;}
 input[type=text].full {width: 482px;}
+input[type=password].half {width: 227px;}
+input[type=password].full {width: 482px;}
 
 textarea.half {width: 227px; max-width: 227px;}
 textarea.full {width: 482px; max-width: 482px;}

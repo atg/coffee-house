@@ -27,7 +27,7 @@
 		<h2 class="half right">Language XML file</h2>
 			<div class="clear"></div>
 		<input type="text" class="half left" name="download_url" value="<?=set_value('download_url')?>" />
-		<div class="half right"><input type="file" name="userfile" /></div>
+		<div class="half right"><input type="file" name="userfile" id="file_input" /><input type="text" class="fake half"/></div>
 			<div class="clear"></div>
 			
 		<hr class="space"/>
