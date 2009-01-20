@@ -5,7 +5,7 @@
 		echo "<p class='error'>$error_text</p>";
 	?>
 	
-	<?=form_open('submit')?>
+	<?=form_open_multipart('submit')?>
 		
 		<h2>Name of your
 		<select name="type">
@@ -27,7 +27,7 @@
 		<h2 class="half right">Language XML file</h2>
 			<div class="clear"></div>
 		<input type="text" class="half left" name="download_url" value="<?=set_value('download_url')?>" />
-		<div class="half right"><input type="file" name="languagexml" /></div>
+		<div class="half right"><input type="file" name="userfile" /></div>
 			<div class="clear"></div>
 			
 		<hr class="space"/>
