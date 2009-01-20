@@ -1,5 +1,9 @@
 <?php
 
+# File: search_form.php
+# View
+# Search form
+
 $this->load->helper('form');
 
 echo form_open('search');
