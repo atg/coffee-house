@@ -24,6 +24,8 @@
 			<div class="clear"></div>
 		<input type="text" class="half left" name="download_url" value="<?=set_value('download_url')?>" />
 		<div class="half right"><input type="file" name="languagexml" /></div>
+			<div class="clear"></div>
+			
 		<hr class="space"/>
 		
 		<h2>Description*</h2>
