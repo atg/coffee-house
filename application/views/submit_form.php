@@ -20,8 +20,11 @@
 			<div class="clear"></div>
 		
 		<h2>OR direct download url</h2>
-		<input type="text" class="full" name="download_url" value="<?=set_value('download_url')?>" />
-		
+		<h2 class="half left"><em>OR</em> Direct Download URL</h2>
+		<h2 class="half right">Language XML file</h2>
+			<div class="clear"></div>
+		<input type="text" class="half left" name="download_url" value="<?=set_value('download_url')?>" />
+		<input type="file" class="half right" name="languagexml" />
 		<hr class="space"/>
 		
 		<h2>Description*</h2>

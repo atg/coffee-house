@@ -2,6 +2,42 @@
 
 class Submit extends Controller {
 	
+	function getLanguageXML(&$err)
+	{
+		if (!isset($_FILES['languagexml']))
+		{
+			$err = "Please upload a langauge.xml file..";
+			return "";
+		}
+
+		$file = $_FILES['languagexml'];
+		if (!$file)
+		{
+			$err = "Please upload a valid langauge.xml file..";
+			return "";
+		}
+
+		if ($file['size'] > (1024 * 1024) || $file['size'] == 0) // 1 megabyte
+		{
+			$err = "Language.xml must be under 1MB.";
+			return "";
+		}
+
+
+		$h = fopen($file['tmp_name'], 'r');
+		$lang = fgets($h);
+		fclose($h);
+
+		if (!strlen($lang))
+		{
+			$err = "Please upload a non-empty langauge.xml file.";
+			return "";
+		}
+
+		return $lang;
+	}
+	
+	
 	function index()
 	{
 		$this->load->model('core', '', TRUE);
@@ -34,6 +70,15 @@ class Submit extends Controller {
 				$download_url = '';
 			}
 			
+			$err = "";
+			$langXML = $this->getLanguageXML($err);
+			if ($use_github == 0 && ($langXML == "" || $err != ""))
+			{
+				$this->load->view('submit_form');
+				$this->load->view('footer');
+				return;
+			}
+			
 			$data = array(
 				'id'			=> '',
 				'name'			=> $this->input->post('name'),
@@ -43,6 +88,7 @@ class Submit extends Controller {
 				'git_username'	=> $github_name,
 				'git_project'	=> $github_project,
 				'download_url'	=> $download_url,
+				'language_xml'	=> $langXML,
 				'datetime'		=> date('Y-m-d H:i:s'),
 				'mail'			=> $this->input->post('mail'),
 				'password'		=> md5($this->input->post('password')),
